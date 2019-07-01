@@ -8,7 +8,7 @@
     <title>Stundenzettel</title>
 </head>
 <body>
-    <header>
+    <header class="container">
         <div>
             <h1 id="title">Stundenzettel</h1>
         </div>
@@ -26,13 +26,31 @@
                     </div>    
                 </div>
                 <div class="col-sm">
-                    <h2 id="user.cooperate">Firma</h2>
+                    <h2 id="user.company">Firma</h2>
+                    <div class="row">
+                        <div class="col-sm">
+                            <p id="companyName"></p>
+                        </div>     
+                    </div>    
                 </div>
             </div>
         </div>
     </header>
-    <main>
-        <div>
+    <main class="container">
+        <div id="selectMonth" class="container">
+            <div class="row">
+                <div class="col-sm">
+                One of three columns
+                </div>
+                <div class="col-sm">
+                One of three columns
+                </div>
+                <div class="col-sm">
+                One of three columns
+                </div>
+            </div>
+        </div>
+        <div class="container">
             <table id="overview" class="table table-dark">   
                 <thead>
                     <tr>
@@ -44,40 +62,14 @@
                         <th scope="col">Tätigkeit</th>
                         <th scope="col">Projektbezogene Angaben</th>
                     </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <th scope="row">01.07.2019</th>
-                        <td>Hann-Rück/Reflex</td>
-                        <td>8:00</td>
-                        <td>17:00</td>
-                        <td>0:30</td>
-                        <td>8:30</td>
-                        <td>Core QA Scrum</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">01.07.2019</th>
-                        <td>Hann-Rück/Reflex</td>
-                        <td>8:00</td>
-                        <td>17:00</td>
-                        <td>0:30</td>
-                        <td>8:30</td>
-                        <td>Core QA Scrum</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">01.07.2019</th>
-                        <td>Hann-Rück/Reflex</td>
-                        <td>8:00</td>
-                        <td>17:00</td>
-                        <td>0:30</td>
-                        <td>8:30</td>
-                        <td>Core QA Scrum</td>
-                    </tr>
+                </thead>
+                <tbody id="tableBody">
+                    
                 </tbody>
             </table>
         </div>
     </main>
-    <footer>
+    <footer class="container">
         <div class="container">
             <div class="row">
                 <div id="total" class="col-sm">
