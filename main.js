@@ -26,7 +26,15 @@ var tableObject = function (day, project,start,end,pause,total,something) {
 
 var tableRow = "";
 for(var day = 0;day < MONTHDAYS[now.getMonth()]; day++ ){
-    var d = new tableObject(day+1 +'/' + MONTHS[now.getMonth()] + '/' + year,COMPANY,08+":"+00,16+":"+00,01+":"+00,07+":"+00,COMPANY);
+    var d = new tableObject(
+        day+1 +'/' + MONTHS[now.getMonth()] + '/' + year,
+        COMPANY,
+        08+":"+00,
+        16+":"+00,
+        01+":"+00,
+        07+":"+00,
+        COMPANY
+        );
     tableRow += 
     "<tr>" + 
         "<th scope='row'>" + d.day + "</th>" +
