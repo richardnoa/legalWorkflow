@@ -14,7 +14,7 @@
         </div>
         <div class="container">
             <div class="row">
-                <div class="col-sm">
+                <div id="userInformation" onclick="updateUserInformation()" class="col-sm bg-secondary text-white">
                     <h2 id="user.name">Name</h2>
                     <div class="row">
                         <div class="col-sm">
@@ -25,7 +25,7 @@
                         </div>
                     </div>    
                 </div>
-                <div class="col-sm">
+                <div id="company" onclick="updateCompanyInformation()" class="col-sm bg-dark text-white">
                     <h2 id="user.company">Firma</h2>
                     <div class="row">
                         <div class="col-sm">
@@ -37,16 +37,21 @@
         </div>
     </header>
     <main class="container">
-        <div id="selectMonth" class="container">
-            <div class="row">
-                <div class="col-sm">
-                One of three columns
-                </div>
-                <div class="col-sm">
-                One of three columns
-                </div>
-                <div class="col-sm">
-                One of three columns
+        <div class="container">
+            <div id="pickMonth" class="btn-toolbar" role="toolbar" aria-label="Toolbar with button group">
+                <div class="btn-group mr-2" role="group" aria-label="First group">
+                    <button type="button" class="btn btn-secondary">Jan</button>
+                    <button type="button" class="btn btn-secondary">Feb</button>
+                    <button type="button" class="btn btn-secondary">Mar</button>
+                    <button type="button" class="btn btn-secondary">Apr</button>
+                    <button type="button" class="btn btn-secondary">Mai</button>
+                    <button type="button" class="btn btn-secondary">Jun</button>
+                    <button type="button" class="btn btn-secondary">Jul</button>  
+                    <button type="button" class="btn btn-secondary">Aug</button>
+                    <button type="button" class="btn btn-secondary">Sep</button> 
+                    <button type="button" class="btn btn-secondary">Oct</button> 
+                    <button type="button" class="btn btn-secondary">Nov</button>
+                    <button type="button" class="btn btn-secondary">Dec</button>  
                 </div>
             </div>
         </div>
@@ -68,6 +73,7 @@
                 </tbody>
             </table>
         </div>
+        
     </main>
     <footer class="container">
         <div class="container">
