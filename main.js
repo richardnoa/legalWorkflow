@@ -99,6 +99,7 @@ function updateDay(clicked_id){
             '<label for="exampleFormControlInput1">Projekt / Ort</label>'+
             '<input type="text" class="form-control" id="projectFormInput" placeholder="Projekt / Ort">'+
         '</div>' +
+        '<div class="container row">'+
         '<div class="form-group">'+
             '<label for="exampleFormControlSelect1">Von</label>'+
             '<input type="time"  class="form-control" id="startFormInput">'+
@@ -110,6 +111,7 @@ function updateDay(clicked_id){
         '<div class="form-group">'+
             '<label for="exampleFormControlSelect1">Pause</label>'+
             '<input type="time"  class="form-control" id="pauseFormInput">'+
+        '</div>'+
         '</div>'+
         '<div class="form-group">'+
             '<label for="exampleFormControlTextarea1">Projektbezogene Angaben</label>'+
