@@ -40,6 +40,7 @@ function timeDiff(start, end, pause) {
 }
 
 //creat table rows
+//TODO: function @paramter array of tableObjects [len(month)] @output array with html <tr>
 var project = "";
 var something = "";
 
@@ -63,9 +64,11 @@ for(var day = 0;day < MONTHDAYS[now.getMonth()]; day++ ){
         "<td>" + d.pause + "</td>" +
         "<td>" + d.total + "</td>" +
         "<td>" + d.something + "</td>" +
-    "</tr>");
+    "</tr>" +
+    "<p class='container row'id='tableRow" + d.day.split('/')[0] +"FormInput'" + "></p>");
 };
 
+//TODO: Function @param array with html elements @output string with html code
 var unpackedRows = "";
 tableRows.forEach(element => {
     unpackedRows += element;
@@ -90,12 +93,36 @@ function updateCompanyInformation(){
 
 //TODO: Update the row with user input
 function updateDay(clicked_id){   
-    rowToUpdate = document.getElementById(clicked_id).innerHTML = "<p>Neuer Eintrag</p>";
+    rowToUpdate = document.getElementById(clicked_id+'FormInput').innerHTML = 
+    '<form class="container row">' +
+        '<div class="form-group">'+
+            '<label for="exampleFormControlInput1">Projekt / Ort</label>'+
+            '<input type="text" class="form-control" id="projectFormInput" placeholder="Projekt / Ort">'+
+        '</div>' +
+        '<div class="form-group">'+
+            '<label for="exampleFormControlSelect1">Von</label>'+
+            '<input type="time"  class="form-control" id="startFormInput">'+
+        '</div>'+
+        '<div class="form-group">'+
+            '<label for="exampleFormControlSelect1">Bis</label>'+
+            '<input type="time"  class="form-control" id="endFormInput">'+
+        '</div>'+
+        '<div class="form-group">'+
+            '<label for="exampleFormControlSelect1">Pause</label>'+
+            '<input type="time"  class="form-control" id="pauseFormInput">'+
+        '</div>'+
+        '<div class="form-group">'+
+            '<label for="exampleFormControlTextarea1">Projektbezogene Angaben</label>'+
+            '<input type="text" class="form-control" id="exampleFormControlTextarea1" placeholder="Projektbezogene Angaben"></textarea>'+
+        '</div>'+
+    '</form>';
 };
+
+
 /***
  * TODO:
  * -- click auf Zelle zum eintragen
  * -- objecte speichern
  * -- 
- * 
+ * -- erstelle row Objekte und speichere in array
  */
